@@ -8,12 +8,13 @@
 <body>
     <?php
         if(isset($_POST['enviar'])){
+            include("conexion.php");
             $ID=$_POST['ID_clientes'];
             $Nombre=$_POST['Nombre'];
             $Apellido=$_POST['Apellido'];
             $NIT=$_POST['NIT'];
 
-            include("registro.php");
+           
             $sql="insert into clientes(ID_clientes,Nombre,Apellido, NIT)
             values('".$ID."', '".$Nombre."','".$Apellido."','".$NIT."')";
 

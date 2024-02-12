@@ -48,7 +48,7 @@
             <td><?php echo $mostrar ['Apellido'] ?></td>
             <td><?php echo $mostrar ['NIT'] ?></td>
             <td>
-                <?php echo "<a href='editar.php?=".$mostrar['id']."'>EDITAR</a>"; ?>
+                <?php echo "<a href='editar.php?id=".$mostrar['id']."'>EDITAR</a>"; ?>
                 <?php echo "<a href=''>ELIMINAR</a>"; ?>
             </td>
             

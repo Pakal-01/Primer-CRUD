@@ -19,30 +19,30 @@
             $resultado=mysqli_query($conexion,$sql);
 
             $fila=mysqli_fetch_assoc($resultado);
-            $ID=$fila['ID_clientes'];
-            $Nombre=$fila['Nombre'];
-            $Apellido=$fila['Apellido'];
-            $NIT=$fila['NIT'];
+            $ID=$fila["ID_clientes"];
+            $Nombre=$fila["Nombre"];
+            $Apellido=$fila["Apellido"];
+            $NIT=$fila["NIT"];
             mysqli_close($conexion);
         
     ?>
     <h1>Editar Alumno</h1>
     <form action="<?=$_SERVER['PHP_SELF']?>" method="post"> 
         <label> ID: </label>
-        <input type ="int" name="ID_clientes"> <br>
-        value="<?php echo $ID;?>"<br>
+        <input type ="int" name="ID_clientes"
+        value="<?php echo $ID;?>"><br>
 
         <label> Nombre: </label>
-        <input type ="text" name="Nombre"> <br>
-        value="<?php echo $Nombre;?>"<br>
+        <input type ="text" name="Nombre"
+        value="<?php echo $Nombre;?>"><br>
 
         <label> Apellido: </label>
-        <input type ="text" name="Apellido"> <br>
+        <input type ="text" name="Apellido"
         value="<?php echo $Apellido;?>"<br>
 
         <label> NIT: </label>
-        <input type ="int" name="NIT"> <br>
-        value="<?php echo $NIT;?>"<br>
+        <input type ="int" name="NIT"
+        value="<?php echo $NIT;?>"><br>
 
         <input type="hidden" name="id"
         value="<?php echo $id; ?>">
