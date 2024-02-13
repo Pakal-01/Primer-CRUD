@@ -8,32 +8,30 @@
 <body>
     <?php
         if(isset($_POST['enviar'])){
-            include("conexion.php");
-            $ID=$_POST['ID_clientes'];
             $Nombre=$_POST['Nombre'];
             $Apellido=$_POST['Apellido'];
             $NIT=$_POST['NIT'];
 
-           
-            $sql="insert into clientes(ID_clientes,Nombre,Apellido, NIT)
-            values('".$ID."', '".$Nombre."','".$Apellido."','".$NIT."')";
+            include("conexion.php");
+            $sql="insert into clientes(Nombre,Apellido, NIT)
+            values('".$Nombre."','".$Apellido."','".$NIT."')";
 
             $result=mysqli_query($conexion,$sql);
 
             if($result){
                 //los datos furon ingresados de forma correcta
-                echo "<scrip language='JavaScript'>
+                echo "<script language='JavaScript'>
                         alert('Los datos fueron ingresados 
-                                correctamente a la BD')
-                                location.assign('index.php');
-                                </script>";
+                        correctamente a la BD');
+                        location.assign('index.php');
+                     </script>";
 
             }else{
-                echo "<scrip language='JavaScript'>
+                echo "<script language='JavaScript'>
                         alert('ERROR.Los datos NO fueron ingresados 
-                                correctamente a la BD')
-                                location.assign('index.php');
-                                </script>";
+                        correctamente a la BD');
+                        location.assign('index.php');
+                     </script>";
             }
             mysqli_close($conexion);
         }else{
@@ -42,8 +40,6 @@
     ?>
     <h1>AGREGAR NUEVO CLIENTE</h1>
     <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
-        <label> ID: </label>
-        <input type ="int" name="ID_clientes"> <br>
         <label> nombre: </label>
         <input type ="text" name="Nombre"> <br>
         <label> Apellido: </label>
