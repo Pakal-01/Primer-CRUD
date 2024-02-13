@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
     <?php
@@ -25,11 +26,7 @@
                 echo '<script type="text/javascript">alert("modificado");location.assign("index.php");</script>';
 
             }else{
-                echo "<script>
-                        alert('Los datos NO se actualizaron 
-                        correctamente');
-                        location.assign('index.php');
-                     </script>";
+                echo '<script type="text/javascript">alert("no se realizo la modificion");location.assign("index.php");</script>';
 
             }
             mysqli_close($conexion);

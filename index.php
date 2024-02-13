@@ -14,31 +14,22 @@
         }
     </script>
     <!-- estilo de borde de tabla  -->
-    <style>
-        table, th, td {
-            border: 1px solid blue;
-            border-collapse:collapse;
-        }
-        th,td{
-            padding: 5px;
-        }
-        th{
-            text-align: left;
-        }
-    </style>
-    <!-- FIN DE estilo de borde de tabla  -->
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    
 </head>
 <body>
     <h1>Clientes</h1>
     <a href="agregar.php">Nuevo Cliente</a><br><br>
-    <table style="width: 40%;">
-        <tr>   
-            <td><b>ID</b></td>
-            <td><b>NOMBRE</b></td>
-            <td><b>APELLIDOS</b></td>
-            <td><b>NIT</b></td>
-            <td><b>Acciones</b></td> 
-        </tr>
+    <table >
+       <thead>
+            <tr>   
+                <th>ID</th>
+                <th>NOMBRE</th>
+                <th>APELLIDOS</th>
+                <th>NIT</th>
+                <th>Acciones</th> 
+            </tr>
+        </thead>
 
         <?php
         $sql="SELECT * from clientes";
