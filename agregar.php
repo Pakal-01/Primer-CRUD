@@ -21,18 +21,11 @@
 
             if($result){
                 //los datos furon ingresados de forma correcta
-                echo "<script language='JavaScript'>
-                        alert('Los datos fueron ingresados 
-                        correctamente a la BD');
-                        location.assign('index.php');
-                     </script>";
+                echo '<script type="text/javascript">alert("Datos ingresados en la BD");location.assign("index2.php");</script>';
 
             }else{
-                echo "<script language='JavaScript'>
-                        alert('ERROR.Los datos NO fueron ingresados 
-                        correctamente a la BD');
-                        location.assign('index.php');
-                     </script>";
+                echo '<script type="text/javascript">alert("Los datos no se ingresaron en la BD");location.assign("index2.php");</script>';
+
             }
             mysqli_close($conexion);
         }else{
@@ -48,7 +41,7 @@
         <label> NIT: </label>
         <input type ="int" name="NIT"> <br>
         <input type="submit" name="enviar" value="AGREGAR">
-        <a href="index.php"> Regresar</a> 
+        <a href="index2.php"> Regresar</a> 
     </form>
 
 

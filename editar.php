@@ -23,10 +23,10 @@
             $resultado=mysqli_query($conexion,$sql);
 
             if($resultado){
-                echo '<script type="text/javascript">alert("modificado");location.assign("index.php");</script>';
+                echo '<script type="text/javascript">alert("modificado");location.assign("index2.php");</script>';
 
             }else{
-                echo '<script type="text/javascript">alert("no se realizo la modificion");location.assign("index.php");</script>';
+                echo '<script type="text/javascript">alert("no se realizo la modificion");location.assign("index2.php");</script>';
 
             }
             mysqli_close($conexion);
@@ -61,7 +61,7 @@
         value="<?php echo $id; ?>">
         
         <input type="submit" name="enviar" value="ACTUALIZAR" >
-        <a href="index.php"> Regresar</a> 
+        <a href="index2.php"> Regresar</a> 
     </form>
     <?php
         }
